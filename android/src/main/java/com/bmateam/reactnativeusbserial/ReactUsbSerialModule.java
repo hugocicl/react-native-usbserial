@@ -115,7 +115,7 @@ public class ReactUsbSerialModule extends ReactContextBaseJavaModule {
         UsbSerialPort port = driver.getPorts().get(0);
 
         port.open(connection);
-        port.setParameters(115200, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
+        port.setParameters(9600, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
 
         String id = generateId();
         UsbSerialDevice usd = new UsbSerialDevice(port);
